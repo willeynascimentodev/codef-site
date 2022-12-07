@@ -2,7 +2,7 @@
     font-size: 20px;
 }
 
-.form-control {
+#form .form-control {
     font-size: 20px;
     color: #999999;
     font-family: "Arial";
@@ -30,13 +30,13 @@ input[type="submit"] {
         justify-content: space-around;
     }
 
-    .form-control {
+    #form .form-control {
         margin: 0px;
         width: 40%;
         margin-left: 1%;
     }
 
-    input[type="submit"] {
+    #form input[type="submit"] {
         width: 15%;
         color: #fff;
         font-size: 12px;
