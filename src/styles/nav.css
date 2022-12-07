@@ -1,0 +1,31 @@
+nav {
+    min-height: 86px;
+    background-color: #ff7c00;
+    display: none;
+}
+
+@media only screen and (min-width: 576px)  {
+    
+}
+
+@media only screen and (min-width: 768px)  {
+    nav {
+        display: block;
+    }
+
+    header div {
+        justify-content: space-between;
+    }
+
+    #header-col-3 {
+        text-align: right !important;
+    }
+}
+
+@media only screen and (min-width: 992px)  {
+    
+}
+
+@media only screen and (min-width: 1200px)  {
+    
+}

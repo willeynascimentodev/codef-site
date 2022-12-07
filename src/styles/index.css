@@ -1,0 +1,40 @@
+html, body, #root {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.contain-all {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.row {
+    width: 90%;
+}
+
+.row:first-child {
+    margin-top: 20px;
+}
+
+div.scrollmenu {
+    background-color: --color1;
+    overflow: auto;
+    white-space: nowrap;
+    background-color: #113454;
+    min-height: 100px;
+}
+
+div.scrollmenu .contem-itens{
+    width: 90%;
+    margin-bottom: 20px !important;
+}
+
+div.scrollmenu .item {
+    background-color: #fff;
+    display: inline-block;
+}
+
+div.scrollmenu::-webkit-scrollbar { 
+    display: none;
+}

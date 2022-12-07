@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import Banner from './components/Banner';
+import Produtos from './components/Produtos';
+import Info from './components/Info';
+import Fornecedores from './components/Fornecedores';
+import FormEmail from './components/FormEmail';
+import Rodape from './components/Rodape';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/index.css';
+import './styles/header.css';
+import './styles/nav.css';
+import './styles/banner.css';
+import './styles/produtos.css';
+import './styles/info.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="contain-all">
+      <Header />      
+      <Menu />
+      <Banner />      
+      <Produtos />      
+      <Info />      
+      <Fornecedores />      
+      <FormEmail />      
+      <Rodape />      
+      
     </div>
   );
 }

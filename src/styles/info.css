@@ -1,0 +1,56 @@
+.contem-info{
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 0px;
+    background-color: #e6e6e6;
+}
+
+.info{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+}
+
+
+.card-info {
+    width: 250px !important;
+}
+
+.card-info-header{
+    min-height: 80px;
+}
+
+.card-info-contem-icon {
+    margin: auto;
+    background-color: #ff6600;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card-info-text{
+    font-family: "Arial";
+    font-size: 25px;
+}
+
+.card-info-text {
+    
+}
+
+@media only screen and (min-width: 576px)  {
+    
+}
+
+@media only screen and (min-width: 768px)  {
+    
+}
+
+
+@media only screen and (min-width: 992px)  {
+    
+}
+
+@media only screen and (min-width: 1200px)  {
+    
+}

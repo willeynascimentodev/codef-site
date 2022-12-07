@@ -1,0 +1,65 @@
+Header {
+    width: 100%;
+    background-color: #113454;
+    min-height: 20px;
+    color: #ffffff;
+    font-family: "Arial";
+    vertical-align: middle;
+}
+
+.section {
+    padding: 20px 0px;
+}
+
+#logo {
+    width: 70%;
+}
+
+#televendas, .tel { 
+    font-size: 25px;
+    font-family: "Arial";
+}
+
+#televendas {
+    color: #ff7c00;
+    font-weight: 800;
+    font-family: "Arial";
+}
+
+#header .tel{
+    font-size: 25px;
+}
+
+@media only screen and (min-width: 576px)  {
+    
+}
+
+@media only screen and (min-width: 768px)  {
+    #logo {
+        width: 100%;
+    }
+    
+    #televendas, .tel { 
+        font-size: 20px;
+    }
+
+    #header-col-2 {
+        padding-top: 18px;
+    }
+
+    #header-col-2 input{
+        height: 50px;
+    }
+
+    #header-col-3 {
+        padding-top: 13px;
+    }
+}
+
+@media only screen and (min-width: 992px)  {
+    
+}
+
+@media only screen and (min-width: 1200px)  {
+    
+}
