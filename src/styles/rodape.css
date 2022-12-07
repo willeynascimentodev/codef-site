@@ -1,0 +1,46 @@
+.rodape-info {
+    width: 90%;
+    margin: auto !important;
+}
+
+#logo-rodape {
+    width: 100px !important;
+}
+
+.rodape-tels i {
+    margin-right: 3px;
+}
+
+#rodape-info-right, .rodape-info-left {
+    text-align: justify !important;
+}
+
+#logo-rodape {
+    width: 250px !important;
+    margin-bottom: 20px !important;
+}
+
+.cp {
+    background-color: #113454;
+    padding: 20px;
+    text-align: center !important;
+    color: #fff;
+}
+
+@media only screen and (min-width: 576px)  {
+    
+}
+
+@media only screen and (min-width: 768px)  {
+
+    
+}
+
+
+@media only screen and (min-width: 992px)  {
+    
+}
+
+@media only screen and (min-width: 1200px)  {
+    
+}

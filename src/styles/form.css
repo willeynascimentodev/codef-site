@@ -1,0 +1,55 @@
+#form h2 {
+    font-size: 20px;
+}
+
+.form-control {
+    font-size: 20px;
+    color: #999999;
+    font-family: "Arial";
+    text-align: center;
+    margin: 10px;
+    display: inline-block;
+}
+
+input[type="submit"] {
+    background-color: #113454;
+    color: #fff;
+}
+
+@media only screen and (min-width: 576px)  {
+    
+}
+
+@media only screen and (min-width: 768px)  {
+
+    #fornecedores {
+        width: 90% !important;
+        margin: auto;
+        text-align: left;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .form-control {
+        margin: 0px;
+        width: 40%;
+        margin-left: 1%;
+    }
+
+    input[type="submit"] {
+        width: 15%;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+}
+
+
+@media only screen and (min-width: 992px)  {
+    
+}
+
+@media only screen and (min-width: 1200px)  {
+    
+}

@@ -6,7 +6,11 @@ function Produto({img, name}) {
     <Card className='produto'>
     <Card.Img variant="top" src={img} />
     <Card.Body>
-        <Card.Title>{ name }</Card.Title>
+        <Card.Title style={{ 
+            
+         }}>
+            { name }
+        </Card.Title>
     </Card.Body>
     </Card>
 );

@@ -1,14 +1,20 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaTruck, FaBox, FaCreditCard } from 'react-icons/fa';
 
 function Info() {
     return (
-        <div id="contem-info">
+        <section id="contem-info" style={
+                {
+                    background: "#e6e6e6", 
+                    paddingTop: "20px",
+                    paddingBottom: "20px"
+                }
+            }>
             <div class="info row">
                 <div className="card-info col-12 col-sm-3">
                     <div className="card-info-header">
                         <div className="card-info-contem-icon">
-                            <FontAwesomeIcon icon="fa-thin fa-truck" />
+                            <FaTruck />
                         </div>
                     </div>
                     <div className="card-info-text">
@@ -18,7 +24,7 @@ function Info() {
                 <div className="card-info col-12 col-sm-3">
                     <div className="card-info-header">
                         <div className="card-info-contem-icon">
-                            
+                            <FaBox />
                         </div>
                     </div>
                     <div className="card-info-text">
@@ -28,7 +34,7 @@ function Info() {
                 <div className="card-info col-12 col-sm-3">
                     <div className="card-info-header">
                         <div className="card-info-contem-icon">
-
+                            <FaCreditCard />
                         </div>
                     </div>
                     <div className="card-info-text">
@@ -36,7 +42,7 @@ function Info() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }   
 

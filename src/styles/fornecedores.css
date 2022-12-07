@@ -1,0 +1,53 @@
+.contem-fornecedores {
+    text-align: center;
+    padding: 20px 0px !important;
+}
+
+.contem-fornecedores h2{ 
+    text-align: center !important;
+    width: 200px;
+    margin: auto;
+}
+
+#fornecedores {
+    width: 90% !important;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fornecedor{
+    max-width: 200px;
+    display: inline-block;
+    /* margin: 10px; */
+}
+
+.fornecedor img{
+    max-width: 100%;
+}
+
+@media only screen and (min-width: 576px)  {
+    
+}
+
+@media only screen and (min-width: 768px)  {
+
+    #fornecedores {
+        width: 90% !important;
+        margin: auto;
+        text-align: left;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+@media only screen and (min-width: 992px)  {
+    
+}
+
+@media only screen and (min-width: 1200px)  {
+    
+}

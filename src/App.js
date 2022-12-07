@@ -14,6 +14,9 @@ import './styles/nav.css';
 import './styles/banner.css';
 import './styles/produtos.css';
 import './styles/info.css';
+import './styles/fornecedores.css';
+import './styles/form.css';
+import './styles/rodape.css';
 
 function App() {
   return (
