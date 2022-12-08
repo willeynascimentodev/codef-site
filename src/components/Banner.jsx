@@ -18,7 +18,7 @@ function Banner() {
     }
 
     const URL = process.env.REACT_APP_IMAGENS_URL
-    console.log(banners)
+        
     return (
         <section className="section" id="banner">
             <Carousel>

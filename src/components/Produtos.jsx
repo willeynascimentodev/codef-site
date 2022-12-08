@@ -1,9 +1,29 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { findAll } from '../resources/produtos/produto.slice'
+import  Spinner from 'react-bootstrap/Spinner';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Produto from './Produto';
 import img from '../images/produto-teste.png'
 
 function Produtos() {
+
+  const dispatch = useDispatch();
+
+    const { produtos, isLoading } = useSelector((state) => state.produto);
+
+    useEffect(() => {
+        dispatch(findAll());
+    }, [dispatch]);
+
+    if(isLoading) {
+        <Spinner/>
+    }
+
+    console.log(produtos);
+
+    const URL = process.env.REACT_APP_IMAGENS_URL
 
     const responsive = {
         superLargeDesktop: {
@@ -28,17 +48,11 @@ function Produtos() {
     return (
         <div className="contem-carousel">
             <Carousel className="carousel-products" responsive={responsive}>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
-                <Produto name="Teste" img={img}/>
+              {
+                produtos.map((produto) => (
+                  <Produto key={produto.id} name={produto.nome} img={`${URL}/${produto.imagem}`}/>
+                )) 
+              }
             </Carousel>
         </div>
     );
