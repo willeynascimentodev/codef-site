@@ -6,6 +6,7 @@ import Info from './components/Info';
 import Fornecedores from './components/Fornecedores';
 import FormEmail from './components/FormEmail';
 import Rodape from './components/Rodape';
+import { ToastContainer } from 'react-toastify'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.css';
@@ -17,6 +18,7 @@ import './styles/info.css';
 import './styles/fornecedores.css';
 import './styles/form.css';
 import './styles/rodape.css';
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
       <Fornecedores />      
       <FormEmail />      
       <Rodape />      
+      <ToastContainer />
       
     </div>
   );
