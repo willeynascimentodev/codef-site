@@ -5,7 +5,6 @@ import  Spinner from 'react-bootstrap/Spinner';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Produto from './Produto';
-import img from '../images/produto-teste.png'
 
 function Produtos() {
 
@@ -23,8 +22,6 @@ function Produtos() {
     if(isLoading) {
         <Spinner/>
     }
-
-    console.log(produtos);
 
     const URL = process.env.REACT_APP_IMAGENS_URL
 
