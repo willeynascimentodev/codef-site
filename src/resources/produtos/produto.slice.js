@@ -11,7 +11,7 @@ const initialState =  {
 
 export const findAll = createAsyncThunk('produtos/findAll', async (data, thunkAPI) => {
     try {
-        return await produtoService.findAll();
+        return await produtoService.findAll(data);
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message)
         || error.message || error.toString();

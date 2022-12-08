@@ -14,7 +14,10 @@ function Produtos() {
     const { produtos, isLoading } = useSelector((state) => state.produto);
 
     useEffect(() => {
-        dispatch(findAll());
+        dispatch(findAll({
+          apenas_destaques: 'true',
+          nome: ''
+        }));
     }, [dispatch]);
 
     if(isLoading) {
@@ -37,11 +40,11 @@ function Produtos() {
         },
         tablet: {
           breakpoint: { max: 768, min: 464 },
-          items: 3
+          items: 2
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 2
+          items: 1
         }
     };
 
