@@ -10,7 +10,7 @@ function Info() {
                     paddingBottom: "20px"
                 }
             }>
-            <div class="info row">
+            <div className="info row">
                 <div className="card-info col-12 col-sm-3">
                     <div className="card-info-header">
                         <div className="card-info-contem-icon">

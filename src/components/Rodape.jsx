@@ -6,7 +6,7 @@ function Rodape() {
 
     return (
         <footer id="contem-rodape-info">
-            <div id="form" class="row rodape-info" style={
+            <div id="form" className="row rodape-info" style={
                     { 
                         textAlign: "center",
                         width: "90%", 
@@ -16,7 +16,7 @@ function Rodape() {
                         justifyContent:"space-between", 
                     }
                 }>
-                <div id="rodape-info-left" class="col-12 col-sm-6"  style={{ textAlign: "left", maxWidth: "320" }}>
+                <div id="rodape-info-left" className="col-12 col-sm-6"  style={{ textAlign: "left", maxWidth: "320" }}>
                     <p>
                         <img id="logo-rodape" src={logo2} alt="Logo 2" /><br/>
                         Venha conhecer esta empresa que não
@@ -27,7 +27,7 @@ function Rodape() {
                     </p>
 
                 </div>
-                <div id="rodape-info-right" class="col-12 col-sm-6" style={{ textAlign: "left", paddingTop: "10px", maxWidth: "320px" }}>
+                <div id="rodape-info-right" className="col-12 col-sm-6" style={{ textAlign: "left", paddingTop: "10px", maxWidth: "320px" }}>
                     <p className="rodape-endereco" style={{ marginBottom: "20px" }}>
                         ENDEREÇO: Rua Barão de Cotegipe,<br/>
                         Mares, 191, CEP 40.445.001, Salvador-BA
