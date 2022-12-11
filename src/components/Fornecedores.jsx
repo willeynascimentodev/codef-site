@@ -22,7 +22,6 @@ function Fornecedores() {
 
     const URL = process.env.REACT_APP_IMAGENS_URL
 
-    console.log(fornecedores);
     return (
         <section id="contem-fornecedores">
                 <h2 className="h2" style={{ textAlign: "center", marginTop: "20px"}}>Fornecedores</h2>

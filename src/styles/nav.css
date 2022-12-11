@@ -4,6 +4,26 @@ nav {
     display: none;
 }
 
+#btn-menu-mobile {
+    background-color: #ff7c00;
+    border-color: #ff7c00;
+    margin-left: 20px;
+}
+
+.menu-mobile {
+    list-style-type: none;
+}
+
+.menu-mobile li{
+    padding: 20px 5px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.menu-mobile li:hover{
+    background-color: lavender;
+}
+
 @media only screen and (min-width: 576px)  {
     
 }
@@ -11,6 +31,10 @@ nav {
 @media only screen and (min-width: 768px)  {
     nav {
         display: block;
+    }
+
+    #btn-menu-mobile {
+        display: none;
     }
 
     header div {
