@@ -1,10 +1,10 @@
 import logo from '../images/logo.png'
-import DropMenu from './DropMenu';
+import SideBar from './SideBar';
 
 function Header() {
     return (
         <header className="section">
-            <DropMenu />
+            <SideBar />
             <div className="row mx-auto">
                 <div id="header-col-1" className="text-center col-xs-12 col-md-3">
                     <img id="logo" src={logo} alt="" />

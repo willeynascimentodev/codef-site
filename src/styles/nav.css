@@ -1,5 +1,6 @@
 nav {
-    min-height: 86px;
+    min-height: 50px;
+    max-height: 100px;
     background-color: #ff7c00;
     display: none;
 }
@@ -10,7 +11,11 @@ nav {
     margin-left: 20px;
 }
 
-.menu-mobile {
+.offcanvas-body, .offcanvas-title{
+    color: #113454;
+}
+
+.menu-mobile, .menu-desktop {
     list-style-type: none;
 }
 
@@ -22,6 +27,49 @@ nav {
 
 .menu-mobile li:hover{
     background-color: lavender;
+}
+
+.menu-desktop { 
+    padding-top: 12px;
+    display: flex;
+}
+
+.menu-desktop li {
+    display: inline;
+    padding-top: 20px 0px;
+    min-width: 15%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-desktop li:hover {
+    font-size: 15px;
+}
+
+#dropdown-basic {
+    background: none;
+    border: none;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.menu-drop{
+    background-color: #113454;   
+    
+}
+
+.item-menu-drop{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.menu-drop a:last-child{
+    border-bottom: 0px;
 }
 
 @media only screen and (min-width: 576px)  {

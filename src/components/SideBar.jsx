@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FaBars } from 'react-icons/fa';
 
-function DropMenu() {
+function SideBar() {
 
     const dispatch = useDispatch();
     const { categorias } = useSelector((state) => state.categoria);
@@ -43,4 +43,4 @@ function DropMenu() {
     );
 }   
 
-export default DropMenu;
+export default SideBar;
