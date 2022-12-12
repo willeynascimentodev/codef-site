@@ -1,16 +1,45 @@
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
 import logo from '../images/logo.png'
 import SideBar from './SideBar';
 
-function Header() {
+import { findAll as findAllProdutos } from '../resources/produtos/produto.slice'
+import  ModalProdutos  from './ModalProdutos' 
+
+function Header({perPage}) {
+
+    const dispatch = useDispatch();
+
+    const [modalShow, setModalShow] = useState(false);
+    const [catId, setCatId] = useState(null);
+
+    const showCategoria = (e) => {
+        setModalShow(true);
+        dispatch(findAllProdutos({
+            apenas_destaques: null,
+            nome: null,
+            cat_id: null,
+            offset: 0,
+            limit: perPage,
+          }));
+    }
+
     return (
         <header className="section">
-            <SideBar />
+            <ModalProdutos
+                id={1} 
+                setModalShow={setModalShow} 
+                modalShow={modalShow} 
+                catId={null}
+                perPage={perPage}
+            />
+            <SideBar perPage={perPage}/>
             <div className="row mx-auto">
                 <div id="header-col-1" className="text-center col-xs-12 col-md-3">
                     <img id="logo" src={logo} alt="" />
                 </div>
                 <div id="header-col-2" className="text-center col-xs-12 col-md-5">
-                    <input className="mx-auto col-md-10 form-control" type="search" placeholder='Buscar produtos'/>
+                    <input onClick={showCategoria} className="mx-auto col-md-10 form-control" type="search" placeholder='Buscar produtos'/>
                 </div>
                 <div id="header-col-3" className="text-center col-xs-12 col-md-3">
                     <span id="televendas">TELEVENDAS</span><br/>

@@ -8,7 +8,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FaBars } from 'react-icons/fa';
 
 
-function SideBar() {
+function SideBar({perPage}) {
 
     const dispatch = useDispatch();
 
@@ -34,7 +34,7 @@ function SideBar() {
             nome: null,
             cat_id: catId,
             offset: 0,
-            limit: 1,
+            limit: perPage,
           }));
     }
 
@@ -45,7 +45,7 @@ function SideBar() {
                 setModalShow={setModalShow} 
                 modalShow={modalShow} 
                 catId={catId}
-                perPage={1}
+                perPage={perPage}
             />
             <Button id="btn-menu-mobile" variant="primary" onClick={handleShow}>
                 <FaBars />

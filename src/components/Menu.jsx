@@ -6,7 +6,7 @@ import  ModalProdutos  from './ModalProdutos'
 import  Spinner from 'react-bootstrap/Spinner';
 import DropDown from './DropDown';
 
-function Menu() {
+function Menu({perPage}) {
 
     const dispatch = useDispatch();
 
@@ -34,7 +34,7 @@ function Menu() {
         outrasCategorias = categorias.slice(5);
         primeirasCategorias = categorias.slice(0, 5);
     }
-  
+
     const showCategoria = (e) => {
         const catId = parseInt(e.target.getAttribute('value'));
         setCatId(catId);
@@ -44,7 +44,7 @@ function Menu() {
             nome: null,
             cat_id: catId,
             offset: 0,
-            limit: 1
+            limit: perPage
           }));
     }
 
@@ -56,7 +56,7 @@ function Menu() {
                     setModalShow={setModalShow} 
                     modalShow={modalShow} 
                     catId={catId}
-                    perPage={1}
+                    perPage={perPage}
                 />
                 {
                     outrasCategorias.length > 0 ? <li>

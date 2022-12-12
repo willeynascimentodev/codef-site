@@ -21,10 +21,11 @@ import './styles/rodape.css';
 import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
+  const perPage = 10;
   return (
     <div className="contain-all">
-      <Header />      
-      <Menu />
+      <Header perPage={perPage} />      
+      <Menu perPage={perPage}/>
       <Banner />      
       <Produtos />      
       <Info />      

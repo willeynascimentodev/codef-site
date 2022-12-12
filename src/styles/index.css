@@ -47,3 +47,12 @@ div.scrollmenu::-webkit-scrollbar {
     --bs-pagination-active-bg: #ff7c00 !important;
     --bs-pagination-active-border-color: #ff7c00 !important;
 }
+
+.contem-card-produto {
+    text-align: center !important;
+}
+
+.card-produto {
+    display: inline-block !important;
+    margin: 0px;
+}
