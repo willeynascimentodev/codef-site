@@ -9,6 +9,8 @@ html, body, #root {
 .contain-all {
   width: 100%;
   margin: 0 !important;
+  
+
 }
 
 .row {

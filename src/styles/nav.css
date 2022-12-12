@@ -30,12 +30,12 @@ nav {
 }
 
 .menu-desktop { 
-    padding-top: 12px;
+    padding-top: 0px;
     display: flex;
 }
 
 .menu-desktop li {
-    display: inline;
+    display: inline-block;
     padding-top: 20px 0px;
     min-width: 15%;
     text-align: center;
@@ -45,10 +45,11 @@ nav {
     text-transform: uppercase;
     padding: 10px;
     cursor: pointer;
+    max-width: 15% !important;
 }
 
 .menu-desktop li:hover {
-    font-size: 15px;
+    font-size: 17px;
 }
 
 #dropdown-basic {
@@ -77,13 +78,6 @@ nav {
 }
 
 @media only screen and (min-width: 768px)  {
-    nav {
-        display: block;
-    }
-
-    #btn-menu-mobile {
-        display: none;
-    }
 
     header div {
         justify-content: space-between;
@@ -94,8 +88,19 @@ nav {
     }
 }
 
-@media only screen and (min-width: 992px)  {
+@media only screen and (min-width: 887px)  {
     
+    #btn-menu-mobile {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 992px)  {
+
 }
 
 @media only screen and (min-width: 1200px)  {

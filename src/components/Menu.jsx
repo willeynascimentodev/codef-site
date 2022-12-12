@@ -10,6 +10,7 @@ function Menu() {
 
     const { categorias, isLoading, isSuccess } = useSelector((state) => state.categoria);
 
+
     useEffect(() => {
         dispatch(findAll());
     }, [dispatch]);
@@ -18,17 +19,32 @@ function Menu() {
         <Spinner/>
     }
 
+    var outrasCategorias = [];
+    var primeirasCategorias = categorias;
+
+    if( categorias.length > 5) {
+        outrasCategorias = categorias.slice(5);
+        primeirasCategorias = categorias.slice(0, 5);
+    }
+
+    // primeirasCategorias[4] = 'Teste'
+    
+
     return (
         <nav >
             <ul className="menu-desktop">
-                <li>
-                    < DropDown style={{ marginRight: "5px" }} />
-                </li>
-                <li>Categoria 1</li>
-                <li>Categoria 2</li>
-                <li>Categoria 3</li>
-                <li>Categoria 4</li>
-                <li>Categoria Teste background-color: #113454;</li>
+                {
+                    outrasCategorias.length > 0 ? <li>
+                            < DropDown categorias={outrasCategorias} style={{ marginRight: "5px" }} />
+                        </li> : ''
+                }
+                
+                {
+                    primeirasCategorias.map((categoria) => (
+                        <li key={categoria.id}>{ categoria.nome }</li>
+                    )) 
+                }
+                
             </ul>
         </nav>
     );

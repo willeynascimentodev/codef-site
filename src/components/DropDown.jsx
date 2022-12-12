@@ -9,9 +9,11 @@ function BasicExample({categorias}) {
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="menu-drop">
-        <Dropdown.Item className="item-menu-drop" href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item className="item-menu-drop" href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item className="item-menu-drop" href="#/action-3">Something else</Dropdown.Item>
+            {
+                categorias.map((categoria) => (
+                    <Dropdown.Item key={categoria.id} className="item-menu-drop" href="#">{ categoria.nome }</Dropdown.Item>
+                )) 
+            }
       </Dropdown.Menu>
     </Dropdown>
   );
