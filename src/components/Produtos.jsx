@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { findAll } from '../resources/produtos/produto.slice'
+import { findCarousel } from '../resources/produtos/produto.slice'
 import  Spinner from 'react-bootstrap/Spinner';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -10,18 +10,17 @@ function Produtos() {
 
   const dispatch = useDispatch();
 
-    const { produtos, isLoading } = useSelector((state) => state.produto);
-
-    useEffect(() => {
-        dispatch(findAll({
+    const { produtosCarousel, isLoadingCarousel, isSuccessCarousel } = useSelector((state) => state.produto);
+  
+    useEffect( () => {
+        dispatch(findCarousel({
           apenas_destaques: 'true',
-          nome: ''
+          nome: null,
+          cat_id: null,
+          offset: 0,
+          limit: 100,
         }));
     }, [dispatch]);
-
-    if(isLoading) {
-        <Spinner/>
-    }
 
     const URL = process.env.REACT_APP_IMAGENS_URL
 
@@ -49,9 +48,9 @@ function Produtos() {
         <div className="contem-carousel">
             <Carousel className="carousel-products" responsive={responsive}>
               {
-                produtos.map((produto) => (
+                produtosCarousel.map((produto) => (
                   <Produto key={produto.id} name={produto.nome} img={`${URL}/${produto.imagem}`}/>
-                )) 
+                ))
               }
             </Carousel>
         </div>

@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { findAll } from '../resources/categorias/categoria.slice'
+import { findAll as findAllProdutos } from '../resources/produtos/produto.slice'
+import  ModalProdutos  from './ModalProdutos' 
 import  Spinner from 'react-bootstrap/Spinner';
 import DropDown from './DropDown';
 
@@ -10,13 +12,19 @@ function Menu() {
 
     const { categorias, isLoading, isSuccess } = useSelector((state) => state.categoria);
 
+    const [modalShow, setModalShow] = useState(false);
+    const [catId, setCatId] = useState(1);
+
 
     useEffect(() => {
-        dispatch(findAll());
+        dispatch(findAll({
+
+        }));
+
     }, [dispatch]);
 
-    if(isLoading) {
-        <Spinner/>
+    if(!isLoading) {
+        
     }
 
     var outrasCategorias = [];
@@ -26,22 +34,49 @@ function Menu() {
         outrasCategorias = categorias.slice(5);
         primeirasCategorias = categorias.slice(0, 5);
     }
-
-    // primeirasCategorias[4] = 'Teste'
-    
+  
+    const showCategoria = (e) => {
+        const catId = parseInt(e.target.getAttribute('value'));
+        setCatId(catId);
+        setModalShow(true);
+        dispatch(findAllProdutos({
+            apenas_destaques: null,
+            nome: null,
+            cat_id: catId,
+            offset: 0,
+            limit: 1
+          }));
+    }
 
     return (
         <nav >
             <ul className="menu-desktop">
+                <ModalProdutos
+                    id={1} 
+                    setModalShow={setModalShow} 
+                    modalShow={modalShow} 
+                    catId={catId}
+                    perPage={1}
+                />
                 {
                     outrasCategorias.length > 0 ? <li>
-                            < DropDown categorias={outrasCategorias} style={{ marginRight: "5px" }} />
+                            < DropDown 
+                                categorias={outrasCategorias} 
+                                style={{ marginRight: "5px" }} 
+                                showCategoria={showCategoria}
+                            />
                         </li> : ''
                 }
                 
                 {
                     primeirasCategorias.map((categoria) => (
-                        <li key={categoria.id}>{ categoria.nome }</li>
+                        <li 
+                            key={categoria.id} 
+                            value={categoria.id} 
+                            onClick={ showCategoria }
+                        >
+                            { categoria.nome }
+                        </li>
                     )) 
                 }
                 

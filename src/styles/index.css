@@ -42,3 +42,8 @@ div.scrollmenu .item {
 div.scrollmenu::-webkit-scrollbar { 
     display: none;
 }
+
+.active {
+    --bs-pagination-active-bg: #ff7c00 !important;
+    --bs-pagination-active-border-color: #ff7c00 !important;
+}
