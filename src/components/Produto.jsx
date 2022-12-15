@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import {  useState } from 'react';
 
-function Produto({img, name}) {
+function Produto({img, name, classes}) {
 
     const [btnText, setBtnTxt] = useState('mais');
     const [expanded, setExpanded] = useState(false);
@@ -18,7 +18,7 @@ function Produto({img, name}) {
     }
     
     return (
-    <Card className='produto'>
+    <Card className={classes}>
     <Card.Img variant="top" src={img} />
     <Card.Body style={{ height: `${height}` }}>
         <Card.Title>

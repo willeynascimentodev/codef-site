@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Modal from 'react-bootstrap/Modal';
 import { useSelector, useDispatch } from 'react-redux';
 import CardProduto from './CardProduto'
+import Produto from './Produto'
 
 import  Search  from './Search' 
 import  Pag  from './Pagination' 
@@ -34,7 +35,7 @@ function ModalProdutos({modalShow, setModalShow, catId, perPage}) {
           <div class="contem-card-produto">
             { 
                   produtos.map((produto) => (
-                    <CardProduto produto={produto} path={`${URL}/${produto.imagem}`}/>
+                    <Produto classes="col-4 col-sm-3 col-md-2 card-produto" key={produto.id} name={produto.nome} img={`${URL}/${produto.imagem}`}/>
                 )) 
                 
             }
