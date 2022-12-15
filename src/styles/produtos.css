@@ -33,6 +33,29 @@
     overflow: "hidden";
 }
 
+.text-elips {
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    font-size: 18px;
+}
+
+.text-elips-expand {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: -20px;
+    position: absolute;
+    margin-left: -10px;
+    z-index: 1;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.produto .card-body {
+    height: 60px;
+}
+
 
 @media only screen and (min-width: 576px)  {
     
