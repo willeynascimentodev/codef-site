@@ -33,7 +33,7 @@ function Header({perPage}) {
                 marginTop: "90vh",
                 position: "fixed",
                 fontSize: "30px",
-                marginLeft: "95%"
+                marginLeft: "90%"
             }}>
                 <FaWhatsapp />
             </a>
