@@ -50,7 +50,7 @@ function Menu({perPage}) {
 
     return (
         <nav >
-            <ul className="menu-desktop">
+            <ul className="menu-desktop" style={{justifyContent: "center"}}>
                 <ModalProdutos
                     id={1} 
                     setModalShow={setModalShow} 
