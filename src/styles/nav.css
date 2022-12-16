@@ -32,12 +32,12 @@ nav {
 .menu-desktop { 
     padding-top: 0px;
     display: flex;
+    padding-bottom: 5px;
 }
 
 .menu-desktop li {
     display: inline-block;
     padding-top: 20px 0px;
-    min-width: 15%;
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -45,11 +45,10 @@ nav {
     text-transform: uppercase;
     padding: 10px;
     cursor: pointer;
-    max-width: 15% !important;
 }
 
-.menu-desktop li:hover {
-
+.menu-desktop li:hover, #dropdown-basic:hover {
+    color: #113454;
 }
 
 #dropdown-basic {
@@ -58,6 +57,14 @@ nav {
     padding: 0px !important;
     margin: 0px !important;
 }
+
+#dropdown svg {
+    vertical-align: baseline !important;
+  }
+
+#dropdown-basic, .menu-desktop li{ 
+    font-size: 12px;
+}   
 
 .menu-drop{
     background-color: #113454;   
@@ -86,10 +93,7 @@ nav {
     #header-col-3 {
         text-align: right !important;
     }
-}
 
-@media only screen and (min-width: 887px)  {
-    
     #btn-menu-mobile {
         display: none;
     }
@@ -99,10 +103,28 @@ nav {
     }
 }
 
-@media only screen and (min-width: 992px)  {
+@media only screen and (min-width: 887px)  {
+    #dropdown-basic, .menu-desktop li{ 
+        font-size: 13px;
+    } 
+}
 
+@media only screen and (min-width: 992px)  {
+    #dropdown-basic, .menu-desktop li{ 
+        font-size: 15px;
+    } 
+
+    .menu-desktop { 
+        padding-bottom: 6px;
+    }
 }
 
 @media only screen and (min-width: 1200px)  {
-    
+    #dropdown-basic, .menu-desktop li{ 
+        font-size: 17px;
+    } 
+
+    .menu-desktop { 
+        padding-bottom: 7px;
+    }
 }

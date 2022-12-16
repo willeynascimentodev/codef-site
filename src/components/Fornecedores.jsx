@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { findAll } from '../resources/fornecedores/fornecedor.slice'
 import  Spinner from 'react-bootstrap/Spinner';
+import Carousel from "react-multi-carousel";
 
 function Fornecedores() {
 
@@ -20,23 +21,38 @@ function Fornecedores() {
         <Spinner/>
     }
 
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 2000, min: 992 },
+          items: 6
+        },
+        desktop: {
+          breakpoint: { max: 992, min: 768 },
+          items: 4
+        },
+        tablet: {
+          breakpoint: { max: 768, min: 464 },
+          items: 3
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 2
+        }
+    };
+
     const URL = process.env.REACT_APP_IMAGENS_URL
 
     return (
-        <section id="contem-fornecedores">
-                <h2 className="h2" style={{ textAlign: "center", marginTop: "20px"}}>Fornecedores</h2>
-            <div id="fornecedores row" style={{ textAlign: "center", width: "90%", margin: "auto"}}>
-                {
-                    fornecedores.map((fornecedor) => (
-                        <div className="fornecedor col-sm-6 col-md-3 col-lg-2">
-                            <img src={`${URL}/${fornecedor.imagem}`} alt="" />
-                        </div>
-                    )) 
-                }
-                
-       
-            </div>
-        </section>
+        <div className="contem-carousel">
+            <Carousel className="carousel-fornecedores" responsive={responsive}>
+            {
+                fornecedores.map((fornecedor) => (
+                    <img style={{ width: "80%" }} src={`${URL}/${fornecedor.imagem}`} alt="" />  
+                ))
+            }
+            </Carousel>
+        </div>
     );
 }   
 

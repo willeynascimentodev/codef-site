@@ -4,7 +4,7 @@ import {  useState } from 'react';
 function Produto({img, name, classes}) {
 
     const [btnText, setBtnTxt] = useState('mais');
-    const [expanded, setExpanded] = useState(false);
+    const [expanded, setExpanded] = useState(true);
     const [height, setHeight] = useState('');
     const [display, setDisplay] = useState('-webkit-box');
 
@@ -14,13 +14,12 @@ function Produto({img, name, classes}) {
         setBtnTxt(expanded ? "menos" : "mais" );
         setHeight(expanded ? "auto" : "" );
         setDisplay(expanded ? "" : "-webkit-box" );
-        console.log(expanded);
     }
     
     return (
     <Card className={classes}>
     <Card.Img variant="top" src={img} />
-    <Card.Body style={{ height: `${height}` }}>
+    <Card.Body style={{ height: `${height}`, borderRadius: "6px" }}>
         <Card.Title>
             <p className="text-elips" style={{ display: `${display}` }}>
                 { name } 

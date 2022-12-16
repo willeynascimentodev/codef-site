@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import logo from '../images/logo.png'
 import SideBar from './SideBar';
+import { FaWhatsapp } from 'react-icons/fa';
 
 import { findAll as findAllProdutos } from '../resources/produtos/produto.slice'
 import  ModalProdutos  from './ModalProdutos' 
@@ -26,6 +27,9 @@ function Header({perPage}) {
 
     return (
         <header className="section">
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=5571999728365&text=Ol%C3%A1." style={{ zIndex: "1000" }}>
+                <FaWhatsapp />
+            </a>
             <ModalProdutos
                 id={1} 
                 setModalShow={setModalShow} 
