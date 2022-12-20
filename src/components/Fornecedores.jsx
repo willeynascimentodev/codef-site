@@ -44,7 +44,13 @@ function Fornecedores() {
     const URL = process.env.REACT_APP_IMAGENS_URL
 
     return (
-        <div className="contem-carousel">
+        <div className="contem-carousel fornecedores">
+          <h2 style={{
+            width: "100%",
+            textAlign: "center",
+            marginBottom: "30px",
+          }}>Fornecedores</h2>
+
             <Carousel className="carousel-fornecedores" responsive={responsive}>
             {
                 fornecedores.map((fornecedor) => (

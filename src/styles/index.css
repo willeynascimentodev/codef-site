@@ -56,3 +56,32 @@ div.scrollmenu::-webkit-scrollbar {
     display: inline-block !important;
     margin: 0px;
 }
+
+.btn-wp {
+    font-size: 30px;
+    margin-left: 88%;
+    margin-top: 92vh;
+}
+
+@media only screen and (min-width: 768px)  {
+
+    .btn-wp {
+        font-size: 50px;
+        margin-left: 92%;
+        margin-top: 89vh;
+    }
+}
+
+
+@media only screen and (min-width: 992px)  {
+    
+}
+
+@media only screen and (min-width: 1200px)  {
+    .btn-wp {
+        font-size: 60px;
+        margin-left: 94%;
+        margin-top: 88vh;
+    }
+    
+}
