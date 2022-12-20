@@ -54,7 +54,7 @@ div.scrollmenu::-webkit-scrollbar {
 
 .card-produto {
     display: inline-block !important;
-    margin: 0px;
+    margin: 10px;
 }
 
 .btn-wp {
