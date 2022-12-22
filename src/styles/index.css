@@ -60,7 +60,6 @@ div.scrollmenu::-webkit-scrollbar {
 .btn-wp {
     font-size: 30px;
     margin-left: 88%;
-    margin-top: 92vh;
 }
 
 @media only screen and (min-width: 768px)  {
@@ -84,4 +83,40 @@ div.scrollmenu::-webkit-scrollbar {
         margin-top: 88vh;
     }
     
+}
+
+@media only screen and (min-height: 200px)  {
+    .btn-wp {
+        margin-top: 58vh;
+    }
+}
+
+@media only screen and (min-height: 300px)  {
+    .btn-wp {
+        margin-top: 70vh;
+    }
+}
+
+@media only screen and (min-height: 400px)  {
+    .btn-wp {
+        margin-top: 75vh;
+    }
+}
+
+@media only screen and (min-height: 500px)  {
+    .btn-wp {
+        margin-top: 80vh;
+    }
+}
+
+@media only screen and (min-height: 600px)  {
+    .btn-wp {
+        margin-top: 85vh;
+    }
+}
+
+@media only screen and (min-height: 700px)  {
+    .btn-wp {
+        margin-top: 87vh;
+    }
 }
