@@ -30,6 +30,7 @@ function Header({perPage}) {
             <a className="btn-wp" target="_blank" href="https://api.whatsapp.com/send?phone=5571999728365&text=Ol%C3%A1." style={{ 
                 zIndex: "1000",
                 color: "green",
+
                 position: "fixed",
             }}>
                 <FaWhatsapp />

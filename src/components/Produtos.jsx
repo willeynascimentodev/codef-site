@@ -5,6 +5,7 @@ import  Spinner from 'react-bootstrap/Spinner';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Produto from './Produto';
+import ModalImagemProduto from "./ModalImagemProduto";
 
 function Produtos() {
 
@@ -23,6 +24,14 @@ function Produtos() {
     }, [dispatch]);
 
     const URL = process.env.REACT_APP_IMAGENS_URL
+
+    const [modalImagemShow, setModalImagemShow] = useState(false);
+    const [imagemProduto, setImagemProduto] = useState('');
+  
+    const showImagem = (e) => {
+        setImagemProduto(e.target.name);
+        setModalImagemShow(true);
+    }
 
     const responsive = {
         superLargeDesktop: {
@@ -46,10 +55,16 @@ function Produtos() {
 
     return (
         <div className="contem-carousel">
+        <ModalImagemProduto
+          id={1} 
+          setModalShow={setModalImagemShow} 
+          modalShow={modalImagemShow} 
+          imagem={imagemProduto}
+        />
             <Carousel className="carousel-products" responsive={responsive}>
               {
                 produtosCarousel.map((produto) => (
-                  <Produto classes="produto" key={produto.id} name={produto.nome} img={`${URL}/${produto.imagem}`}/>
+                  <Produto classes="produto" showImagem={showImagem} key={produto.id} name={produto.nome} img={`${URL}/${produto.imagem}`}/>
                 ))
               }
             </Carousel>

@@ -58,6 +58,10 @@
     height: 70px;
 }
 
+.produto img {
+    cursor: pointer;
+}
+
 
 @media only screen and (min-width: 576px)  {
     
