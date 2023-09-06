@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { findAll } from '../resources/banners/banner.slice'
 import Carousel from 'react-bootstrap/Carousel';
 import  Spinner from 'react-bootstrap/Spinner';
+import BannerInfo from './BannerInfo';
 
 function Banner() {
     const dispatch = useDispatch();
@@ -32,6 +33,7 @@ function Banner() {
                     )) 
                 }
             </Carousel>
+            <BannerInfo/>
 
         </section>
     );
