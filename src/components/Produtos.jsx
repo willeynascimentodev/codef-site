@@ -64,7 +64,7 @@ function Produtos() {
             <Carousel className="carousel-products" responsive={responsive}>
               {
                 produtosCarousel.map((produto) => (
-                  <Produto classes="produto" showImagem={showImagem} key={produto.id} name={produto.nome} img={`${URL}/${produto.imagem}`}/>
+                  <Produto classes="produto" showDesc={true} showImagem={showImagem} key={produto.id} name={produto.nome} img={`${URL}/${produto.imagem}`}/>
                 ))
               }
             </Carousel>

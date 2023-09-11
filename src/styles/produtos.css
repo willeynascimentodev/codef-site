@@ -15,9 +15,27 @@
     padding: 20px 0px 20px 0px;
 }
 
+.two-car{
+    background-color: #ff7c00;
+    padding: 20px 0px 20px 0px;
+}
+
+.two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item,
+.two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item--active{
+    width: 220px !important;
+}
+
 .carousel-products{
     width: 90%;
     margin: auto;
+}
+
+.videos-car {
+    width: 50% !important;
+}
+
+.imagens-car {
+    width: 50% !important;
 }
 
 .card-body{
@@ -64,19 +82,43 @@
 
 
 @media only screen and (min-width: 576px)  {
+    .videos-car {
+        width: 40% !important;
+    }
     
+    .imagens-car {
+        width: 60% !important;
+    }
 }
 
 @media only screen and (min-width: 768px)  {
-
+    .videos-car {
+        width: 30% !important;
+    }
+    
+    .imagens-car {
+        width: 70% !important;
+    }
 }
 
 
 @media only screen and (min-width: 992px)  {
+    .videos-car {
+        width: 25% !important;
+    }
     
+    .imagens-car {
+        width: 75% !important;
+    }
 }
 
 @media only screen and (min-width: 1200px)  {
+    .videos-car {
+        width: 20% !important;
+    }
     
+    .imagens-car {
+        width: 80% !important;
+    }
 }
 

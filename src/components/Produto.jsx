@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import {  useState } from 'react';
 
-function Produto({img, name, classes, showImagem}) {
+function Produto({showDesc = true, img, name, classes, showImagem}) {
 
     const [btnText, setBtnTxt] = useState('mais');
     const [expanded, setExpanded] = useState(true);
@@ -19,6 +19,7 @@ function Produto({img, name, classes, showImagem}) {
     return (
     <Card className={classes}>
     <Card.Img onClick={showImagem} name={img} variant="top" src={img} />
+    { showDesc ? 
     <Card.Body style={{ height: `${height}`, borderRadius: "6px" }}>
         <Card.Title>
             <p className="text-elips" style={{ display: `${display}` }}>
@@ -32,6 +33,7 @@ function Produto({img, name, classes, showImagem}) {
             </span>
         </Card.Title>
     </Card.Body>
+    : null }
     </Card>
 );
 }

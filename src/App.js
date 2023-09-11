@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Menu from './components/Menu';
 import Banner from './components/Banner';
 import Produtos from './components/Produtos';
+import Imagens from './components/Imagens';
 import Info from './components/Info';
 import Fornecedores from './components/Fornecedores';
 import FormEmail from './components/FormEmail';
@@ -27,6 +28,7 @@ function App() {
       <Header perPage={perPage} />      
       <Menu perPage={perPage}/>
       <Banner />      
+      <Imagens />  
       <Produtos />      
       <Info />      
       <Fornecedores />      

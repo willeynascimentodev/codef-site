@@ -58,6 +58,7 @@ function ModalProdutos({modalShow, setModalShow, catId, perPage}) {
                       img={`${URL}/${produto.imagem}`} 
                       value={`${URL}/${produto.imagem}`}
                       showImagem={showImagem}
+                      showDesc={true}
                     />
                 )) 
                 
