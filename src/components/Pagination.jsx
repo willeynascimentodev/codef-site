@@ -15,8 +15,6 @@ function Pag({total, perPage, catId}) {
 
         const pag = parseInt(e.target.getAttribute('value'));
 
-        console.log(searchProduto);
-        
         const params = {
             apenas_destaques: null,
             nome: searchProduto,

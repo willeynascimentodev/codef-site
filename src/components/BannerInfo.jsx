@@ -17,7 +17,7 @@ function BannerInfo() {
     if(isLoading) {
         return null;
     }
-    console.log(infos);
+    
     return (
         <section className="inner-section" id="inner-banner">
             { infos && infos.titulo ? 

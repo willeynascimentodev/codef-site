@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import {  useState } from 'react';
 
-function Video({showDesc = true, img, name, classes, showImagem}) {
+function Produto({showDesc = true, img, name, classes, showImagem}) {
 
     const [btnText, setBtnTxt] = useState('mais');
     const [expanded, setExpanded] = useState(true);
@@ -18,7 +18,9 @@ function Video({showDesc = true, img, name, classes, showImagem}) {
     
     return (
     <Card className={classes}>
-    <Card.Img onClick={showImagem} name={img} variant="top" src={img} />
+    
+    <video onClick={showImagem} name={img} variant="top" src={img} controls>
+                        </video>
     { showDesc ? 
     <Card.Body style={{ height: `${height}`, borderRadius: "6px" }}>
         <Card.Title>
@@ -38,4 +40,4 @@ function Video({showDesc = true, img, name, classes, showImagem}) {
 );
 }
   
-  export default Video;
+  export default Produto;

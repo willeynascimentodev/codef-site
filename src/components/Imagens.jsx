@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { findCarousel } from '../resources/produtos/produto.slice'
+import { findCarousel } from '../resources/videos/video.slice'
 import  Spinner from 'react-bootstrap/Spinner';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Produto from './Produto';
-import ModalImagemProduto from "./ModalImagemProduto";
+import Video from './Video';
+import ModalVideoProduto from "./ModalVideoProduto";
 
 function Imagens() {
 
   const dispatch = useDispatch();
 
-    const { produtosCarousel, isLoadingCarousel, isSuccessCarousel } = useSelector((state) => state.produto);
+    const { videosCarousel, isLoadingCarousel, isSuccessCarousel } = useSelector((state) => state.video);
   
     useEffect( () => {
         dispatch(findCarousel({
@@ -79,28 +79,29 @@ function Imagens() {
             display: '-webkit-box'
           }} 
         className="contem-carousel two-car">
-          <ModalImagemProduto
+          <ModalVideoProduto
             id={1} 
             setModalShow={setModalImagemShow} 
             modalShow={modalImagemShow} 
             imagem={imagemProduto}
           />
+            { videosCarousel ? 
             <Carousel 
               className="carousel-products videos-car" responsive={responsive}>
-              {
-                produtosCarousel.map((produto) => (
-                  <Produto classes="produto" showDesc={false} showImagem={showImagem} key={produto.id} name={produto.nome} img={`${URL}/${produto.imagem}`}/>
-                ))
-              }
+                { videosCarousel.map((produto) => (
+                  <Video classes="produto" showDesc={false} showImagem={showImagem} key={produto.id} name="Video" img={`${URL}/${produto.video}`}/>
+                )) }
             </Carousel>
+            : null}
 
+            { videosCarousel ? 
             <Carousel className="carousel-products imagens-car" responsive={responsive2}>
-              {
-                produtosCarousel.map((produto) => (
-                  <Produto classes="produto" showDesc={false} showImagem={showImagem} key={produto.id} name={produto.nome} img={`${URL}/${produto.imagem}`}/>
-                ))
-              }
+                
+                { videosCarousel.map((produto) => (
+                  <Video classes="produto" showDesc={false} showImagem={showImagem} key={produto.id} name="Video" img={`${URL}/${produto.video}`}/>
+                )) }
             </Carousel>
+            : null}
         </div>
     );
 }   
