@@ -6,6 +6,8 @@ import leadReducer from '../resources/leads/lead.slice'
 import categoriaReducer from '../resources/categorias/categoria.slice'
 import infoReducer from '../resources/infos/info.slice'
 import videoReducer from '../resources/videos/video.slice'
+import fotoReducer from '../resources/fotos/foto.slice'
+
 
 export const store = configureStore({
   reducer: {
@@ -15,6 +17,7 @@ export const store = configureStore({
       lead: leadReducer,
       categoria: categoriaReducer,
       info: infoReducer,
-      video: videoReducer
+      video: videoReducer,
+      foto: fotoReducer,
   },
 });

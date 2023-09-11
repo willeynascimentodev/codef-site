@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { findCarousel } from '../resources/videos/video.slice'
+import { findCarouselFotos } from '../resources/fotos/foto.slice'
 import  Spinner from 'react-bootstrap/Spinner';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Video from './Video';
+import Produto from './Produto';
 import ModalVideoProduto from "./ModalVideoProduto";
 
 function Imagens() {
 
   const dispatch = useDispatch();
 
-    const { videosCarousel, isLoadingCarousel, isSuccessCarousel } = useSelector((state) => state.video);
+    const { videosCarousel } = useSelector((state) => state.video);
+    const { fotosCarousel } = useSelector((state) => state.foto);
   
     useEffect( () => {
         dispatch(findCarousel({
@@ -21,6 +24,15 @@ function Imagens() {
           offset: 0,
           limit: 100,
         }));
+
+        dispatch(findCarouselFotos({
+          apenas_destaques: 'true',
+          nome: null,
+          cat_id: null,
+          offset: 0,
+          limit: 100,
+        }));
+        
     }, [dispatch]);
 
     const URL = process.env.REACT_APP_IMAGENS_URL
@@ -94,13 +106,13 @@ function Imagens() {
             </Carousel>
             : null}
 
-            { videosCarousel ? 
-            <Carousel className="carousel-products imagens-car" responsive={responsive2}>
-                
-                { videosCarousel.map((produto) => (
-                  <Video classes="produto" showDesc={false} showImagem={showImagem} key={produto.id} name="Video" img={`${URL}/${produto.video}`}/>
-                )) }
-            </Carousel>
+            { fotosCarousel ? 
+              <Carousel className="carousel-products imagens-car" responsive={responsive2}>
+                  
+                  { fotosCarousel.map((produto) => (
+                    <Produto classes="produto" showDesc={false} key={produto.id} name="Imagem" img={`${URL}/${produto.imagem}`}/>
+                  )) }
+              </Carousel>
             : null}
         </div>
     );

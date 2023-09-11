@@ -22,7 +22,7 @@
 
 .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item,
 .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item--active{
-    width: 220px !important;
+    width: 200px !important;
 }
 
 .carousel-products{
@@ -80,6 +80,10 @@
     cursor: pointer;
 }
 
+.produto video {
+    width: 100% !important;
+}
+
 
 @media only screen and (min-width: 576px)  {
     .videos-car {
@@ -89,9 +93,47 @@
     .imagens-car {
         width: 60% !important;
     }
+
+    .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item,
+    .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item--active{
+        width: 230px !important;
+    }
+
+
 }
 
 @media only screen and (min-width: 768px)  {
+    .videos-car {
+        width: 40% !important;
+    }
+    
+    .imagens-car {
+        width: 60% !important;
+    }
+
+    .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item,
+    .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item--active{
+        width: 300px !important;
+    }
+}
+
+
+@media only screen and (min-width: 992px)  {
+    .videos-car {
+        width: 40% !important;
+    }
+    
+    .imagens-car {
+        width: 60% !important;
+    }
+
+    .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item,
+    .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item--active{
+        width: 390px !important;
+    }
+}
+
+@media only screen and (min-width: 1200px)  {
     .videos-car {
         width: 30% !important;
     }
@@ -99,26 +141,10 @@
     .imagens-car {
         width: 70% !important;
     }
-}
 
-
-@media only screen and (min-width: 992px)  {
-    .videos-car {
-        width: 25% !important;
-    }
-    
-    .imagens-car {
-        width: 75% !important;
-    }
-}
-
-@media only screen and (min-width: 1200px)  {
-    .videos-car {
-        width: 20% !important;
-    }
-    
-    .imagens-car {
-        width: 80% !important;
+    .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item,
+    .two-car .react-multi-carousel-list .react-multi-carousel-track .react-multi-carousel-item--active{
+        width: 390px !important;
     }
 }
 
